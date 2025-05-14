@@ -475,5 +475,6 @@
 	"waterSourceConversion_type": "Bool",
 	"waterSourceConversion_category": "การอัปเดตของโลก",
 	"waterSourceConversion_java_edition": "ใช่",
-	"waterSourceConversion_bedrock_edition": "ไม่"
+	"waterSourceConversion_bedrock_edition": "ไม่",
+	"clipboard_not_supported": "Clipboard not supported"
 }

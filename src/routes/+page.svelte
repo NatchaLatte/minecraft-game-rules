@@ -1,33 +1,35 @@
 <script lang="ts">
+	import { Toast } from '$lib/utils/toast';
 	import { setLocale } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages.js';
-	import Swal from 'sweetalert2';
+
+	const AVAILABILITY_STATUS = {
+		SUCCESS: 'bg-green-500',
+		UNSUCCESS: 'bg-red-500'
+	};
 
 	let src = '/images/minecraft-game-rules-logo.png';
-	const isAvailability = (text: string): string => ['Yes', 'ใช่'].includes(text) ? 'bg-green-500' : 'bg-red-500';
 
-	const Toast = Swal.mixin({
-		toast: true,
-		position: 'top-end',
-		showConfirmButton: false,
-		timer: 1500,
-		timerProgressBar: true,
-		didOpen: (toast) => {
-			toast.onmouseenter = Swal.stopTimer;
-			toast.onmouseleave = Swal.resumeTimer;
-		}
-	});
+	const isAvailability = (text: string): string => ['Yes', 'ใช่'].includes(text) ? AVAILABILITY_STATUS.SUCCESS : AVAILABILITY_STATUS.UNSUCCESS;
+
 	const writeClipboardText = async (text: string) => {
+		if (!navigator.clipboard) {
+			await Toast.fire({
+				icon: 'error',
+				title: m.clipboard_not_supported?.() ?? 'Clipboard not supported'
+			});
+			return;
+		}
 		try {
 			await navigator.clipboard.writeText(text);
 			await Toast.fire({
 				icon: 'success',
-				title: `${m.copy_to_clipboard_success()}`
+				title: m.copy_to_clipboard_success()
 			});
-		} catch (error) {
+		} catch {
 			await Toast.fire({
 				icon: 'error',
-				title: `${m.copy_to_clipboard_unsuccess()}`
+				title: m.copy_to_clipboard_unsuccess()
 			});
 		}
 	};
