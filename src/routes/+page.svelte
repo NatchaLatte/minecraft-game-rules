@@ -4,7 +4,8 @@
 	import Swal from 'sweetalert2';
 
 	let src = '/images/minecraft-game-rules-logo.png';
-	let isAvailability = ['Yes', 'ใช่'];
+	const isAvailability = (text: string): string => ['Yes', 'ใช่'].includes(text) ? 'bg-green-500' : 'bg-red-500';
+
 	const Toast = Swal.mixin({
 		toast: true,
 		position: 'top-end',
@@ -44,6 +45,7 @@
 		<button class="btn" onclick={() => setLocale('en')}>EN</button>
 		<button class="btn" onclick={() => setLocale('th-th')}>TH</button>
 	</div>
+
 	<div class="overflow-x-auto rounded-2xl">
 		<table class="table table-zebra">
 			<thead class="text-center bg-accent text-accent-content">
@@ -86,14 +88,10 @@
 					<td>{m.allowFireTicksAwayFromPlayer_type()}</td>
 					<td>{m.allowFireTicksAwayFromPlayer_category()}</td>
 					<td
-						class={isAvailability.includes(m.allowFireTicksAwayFromPlayer_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.allowFireTicksAwayFromPlayer_java_edition()}</td
+						class={isAvailability(m.allowFireTicksAwayFromPlayer_java_edition())}>{m.allowFireTicksAwayFromPlayer_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.allowFireTicksAwayFromPlayer_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.allowFireTicksAwayFromPlayer_bedrock_edition()}</td
+						class={isAvailability(m.allowFireTicksAwayFromPlayer_bedrock_edition())}>{m.allowFireTicksAwayFromPlayer_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -120,14 +118,10 @@
 					<td>{m.announceAdvancements_type()}</td>
 					<td>{m.announceAdvancements_category()}</td>
 					<td
-						class={isAvailability.includes(m.announceAdvancements_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.announceAdvancements_java_edition()}</td
+						class={isAvailability(m.announceAdvancements_java_edition())}>{m.announceAdvancements_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.announceAdvancements_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.announceAdvancements_bedrock_edition()}</td
+						class={isAvailability(m.announceAdvancements_bedrock_edition())}>{m.announceAdvancements_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -154,14 +148,10 @@
 					<td>{m.blockExplosionDropDecay_type()}</td>
 					<td>{m.blockExplosionDropDecay_category()}</td>
 					<td
-						class={isAvailability.includes(m.blockExplosionDropDecay_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.blockExplosionDropDecay_java_edition()}</td
+						class={isAvailability(m.blockExplosionDropDecay_java_edition())}>{m.blockExplosionDropDecay_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.blockExplosionDropDecay_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.blockExplosionDropDecay_bedrock_edition()}</td
+						class={isAvailability(m.blockExplosionDropDecay_bedrock_edition())}>{m.blockExplosionDropDecay_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -188,14 +178,10 @@
 					<td>{m.commandBlockOutput_type()}</td>
 					<td>{m.commandBlockOutput_category()}</td>
 					<td
-						class={isAvailability.includes(m.commandBlockOutput_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.commandBlockOutput_java_edition()}</td
+						class={isAvailability(m.commandBlockOutput_java_edition())}>{m.commandBlockOutput_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.commandBlockOutput_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.commandBlockOutput_bedrock_edition()}</td
+						class={isAvailability(m.commandBlockOutput_bedrock_edition())}>{m.commandBlockOutput_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -222,14 +208,10 @@
 					<td>{m.commandBlocksEnabled_type()}</td>
 					<td>{m.commandBlocksEnabled_category()}</td>
 					<td
-						class={isAvailability.includes(m.commandBlocksEnabled_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.commandBlocksEnabled_java_edition()}</td
+						class={isAvailability(m.commandBlocksEnabled_java_edition())}>{m.commandBlocksEnabled_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.commandBlocksEnabled_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.commandBlocksEnabled_bedrock_edition()}</td
+						class={isAvailability(m.commandBlocksEnabled_bedrock_edition())}>{m.commandBlocksEnabled_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -256,14 +238,10 @@
 					<td>{m.commandModificationBlockLimit_type()}</td>
 					<td>{m.commandModificationBlockLimit_category()}</td>
 					<td
-						class={isAvailability.includes(m.commandModificationBlockLimit_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.commandModificationBlockLimit_java_edition()}</td
+						class={isAvailability(m.commandModificationBlockLimit_java_edition())}>{m.commandModificationBlockLimit_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.commandModificationBlockLimit_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.commandModificationBlockLimit_bedrock_edition()}</td
+						class={isAvailability(m.commandModificationBlockLimit_bedrock_edition())}>{m.commandModificationBlockLimit_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -290,14 +268,10 @@
 					<td>{m.disableElytraMovementCheck_type()}</td>
 					<td>{m.disableElytraMovementCheck_category()}</td>
 					<td
-						class={isAvailability.includes(m.disableElytraMovementCheck_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.disableElytraMovementCheck_java_edition()}</td
+						class={isAvailability(m.disableElytraMovementCheck_java_edition())}>{m.disableElytraMovementCheck_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.disableElytraMovementCheck_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.disableElytraMovementCheck_bedrock_edition()}</td
+						class={isAvailability(m.disableElytraMovementCheck_bedrock_edition())}>{m.disableElytraMovementCheck_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -324,14 +298,10 @@
 					<td>{m.disablePlayerMovementCheck_type()}</td>
 					<td>{m.disablePlayerMovementCheck_category()}</td>
 					<td
-						class={isAvailability.includes(m.disablePlayerMovementCheck_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.disablePlayerMovementCheck_java_edition()}</td
+						class={isAvailability(m.disablePlayerMovementCheck_java_edition())}>{m.disablePlayerMovementCheck_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.disablePlayerMovementCheck_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.disablePlayerMovementCheck_bedrock_edition()}</td
+						class={isAvailability(m.disablePlayerMovementCheck_bedrock_edition())}>{m.disablePlayerMovementCheck_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -358,14 +328,10 @@
 					<td>{m.disableRaids_type()}</td>
 					<td>{m.disableRaids_category()}</td>
 					<td
-						class={isAvailability.includes(m.disableRaids_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.disableRaids_java_edition()}</td
+						class={isAvailability(m.disableRaids_java_edition())}>{m.disableRaids_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.disableRaids_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.disableRaids_bedrock_edition()}</td
+						class={isAvailability(m.disableRaids_bedrock_edition())}>{m.disableRaids_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -392,14 +358,10 @@
 					<td>{m.doDaylightCycle_type()}</td>
 					<td>{m.doDaylightCycle_category()}</td>
 					<td
-						class={isAvailability.includes(m.doDaylightCycle_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doDaylightCycle_java_edition()}</td
+						class={isAvailability(m.doDaylightCycle_java_edition())}>{m.doDaylightCycle_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doDaylightCycle_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doDaylightCycle_bedrock_edition()}</td
+						class={isAvailability(m.doDaylightCycle_bedrock_edition())}>{m.doDaylightCycle_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -426,14 +388,10 @@
 					<td>{m.doEntityDrops_type()}</td>
 					<td>{m.doEntityDrops_category()}</td>
 					<td
-						class={isAvailability.includes(m.doEntityDrops_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doEntityDrops_java_edition()}</td
+						class={isAvailability(m.doEntityDrops_java_edition())}>{m.doEntityDrops_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doEntityDrops_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doEntityDrops_bedrock_edition()}</td
+						class={isAvailability(m.doEntityDrops_bedrock_edition())}>{m.doEntityDrops_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -460,14 +418,10 @@
 					<td>{m.doFireTick_type()}</td>
 					<td>{m.doFireTick_category()}</td>
 					<td
-						class={isAvailability.includes(m.doFireTick_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doFireTick_java_edition()}</td
+						class={isAvailability(m.doFireTick_java_edition())}>{m.doFireTick_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doFireTick_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doFireTick_bedrock_edition()}</td
+						class={isAvailability(m.doFireTick_bedrock_edition())}>{m.doFireTick_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -494,14 +448,10 @@
 					<td>{m.doImmediateRespawn_type()}</td>
 					<td>{m.doImmediateRespawn_category()}</td>
 					<td
-						class={isAvailability.includes(m.doImmediateRespawn_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doImmediateRespawn_java_edition()}</td
+						class={isAvailability(m.doImmediateRespawn_java_edition())}>{m.doImmediateRespawn_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doImmediateRespawn_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doImmediateRespawn_bedrock_edition()}</td
+						class={isAvailability(m.doImmediateRespawn_bedrock_edition())}>{m.doImmediateRespawn_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -528,14 +478,10 @@
 					<td>{m.doInsomnia_type()}</td>
 					<td>{m.doInsomnia_category()}</td>
 					<td
-						class={isAvailability.includes(m.doInsomnia_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doInsomnia_java_edition()}</td
+						class={isAvailability(m.doInsomnia_java_edition())}>{m.doInsomnia_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doInsomnia_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doInsomnia_bedrock_edition()}</td
+						class={isAvailability(m.doInsomnia_bedrock_edition())}>{m.doInsomnia_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -562,14 +508,10 @@
 					<td>{m.doLimitedCrafting_type()}</td>
 					<td>{m.doLimitedCrafting_category()}</td>
 					<td
-						class={isAvailability.includes(m.doLimitedCrafting_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doLimitedCrafting_java_edition()}</td
+						class={isAvailability(m.doLimitedCrafting_java_edition())}>{m.doLimitedCrafting_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doLimitedCrafting_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doLimitedCrafting_bedrock_edition()}</td
+						class={isAvailability(m.doLimitedCrafting_bedrock_edition())}>{m.doLimitedCrafting_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -596,14 +538,10 @@
 					<td>{m.doMobLoot_type()}</td>
 					<td>{m.doMobLoot_category()}</td>
 					<td
-						class={isAvailability.includes(m.doMobLoot_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doMobLoot_java_edition()}</td
+						class={isAvailability(m.doMobLoot_java_edition())}>{m.doMobLoot_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doMobLoot_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doMobLoot_bedrock_edition()}</td
+						class={isAvailability(m.doMobLoot_bedrock_edition())}>{m.doMobLoot_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -630,14 +568,10 @@
 					<td>{m.doMobSpawning_type()}</td>
 					<td>{m.doMobSpawning_category()}</td>
 					<td
-						class={isAvailability.includes(m.doMobSpawning_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doMobSpawning_java_edition()}</td
+						class={isAvailability(m.doMobSpawning_java_edition())}>{m.doMobSpawning_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doMobSpawning_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doMobSpawning_bedrock_edition()}</td
+						class={isAvailability(m.doMobSpawning_bedrock_edition())}>{m.doMobSpawning_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -664,14 +598,10 @@
 					<td>{m.doPatrolSpawning_type()}</td>
 					<td>{m.doPatrolSpawning_category()}</td>
 					<td
-						class={isAvailability.includes(m.doPatrolSpawning_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doPatrolSpawning_java_edition()}</td
+						class={isAvailability(m.doPatrolSpawning_java_edition())}>{m.doPatrolSpawning_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doPatrolSpawning_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doPatrolSpawning_bedrock_edition()}</td
+						class={isAvailability(m.doPatrolSpawning_bedrock_edition())}>{m.doPatrolSpawning_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -698,14 +628,10 @@
 					<td>{m.doTileDrops_type()}</td>
 					<td>{m.doTileDrops_category()}</td>
 					<td
-						class={isAvailability.includes(m.doTileDrops_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doTileDrops_java_edition()}</td
+						class={isAvailability(m.doTileDrops_java_edition())}>{m.doTileDrops_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doTileDrops_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doTileDrops_bedrock_edition()}</td
+						class={isAvailability(m.doTileDrops_bedrock_edition())}>{m.doTileDrops_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -732,14 +658,10 @@
 					<td>{m.doTraderSpawning_type()}</td>
 					<td>{m.doTraderSpawning_category()}</td>
 					<td
-						class={isAvailability.includes(m.doTraderSpawning_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doTraderSpawning_java_edition()}</td
+						class={isAvailability(m.doTraderSpawning_java_edition())}>{m.doTraderSpawning_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doTraderSpawning_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doTraderSpawning_bedrock_edition()}</td
+						class={isAvailability(m.doTraderSpawning_bedrock_edition())}>{m.doTraderSpawning_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -766,14 +688,10 @@
 					<td>{m.doVinesSpread_type()}</td>
 					<td>{m.doVinesSpread_category()}</td>
 					<td
-						class={isAvailability.includes(m.doVinesSpread_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doVinesSpread_java_edition()}</td
+						class={isAvailability(m.doVinesSpread_java_edition())}>{m.doVinesSpread_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doVinesSpread_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doVinesSpread_bedrock_edition()}</td
+						class={isAvailability(m.doVinesSpread_bedrock_edition())}>{m.doVinesSpread_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -800,14 +718,10 @@
 					<td>{m.doWardenSpawning_type()}</td>
 					<td>{m.doWardenSpawning_category()}</td>
 					<td
-						class={isAvailability.includes(m.doWardenSpawning_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doWardenSpawning_java_edition()}</td
+						class={isAvailability(m.doWardenSpawning_java_edition())}>{m.doWardenSpawning_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doWardenSpawning_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doWardenSpawning_bedrock_edition()}</td
+						class={isAvailability(m.doWardenSpawning_bedrock_edition())}>{m.doWardenSpawning_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -834,14 +748,10 @@
 					<td>{m.doWeatherCycle_type()}</td>
 					<td>{m.doWeatherCycle_category()}</td>
 					<td
-						class={isAvailability.includes(m.doWeatherCycle_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doWeatherCycle_java_edition()}</td
+						class={isAvailability(m.doWeatherCycle_java_edition())}>{m.doWeatherCycle_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.doWeatherCycle_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.doWeatherCycle_bedrock_edition()}</td
+						class={isAvailability(m.doWeatherCycle_bedrock_edition())}>{m.doWeatherCycle_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -868,14 +778,10 @@
 					<td>{m.drowningDamage_type()}</td>
 					<td>{m.drowningDamage_category()}</td>
 					<td
-						class={isAvailability.includes(m.drowningDamage_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.drowningDamage_java_edition()}</td
+						class={isAvailability(m.drowningDamage_java_edition())}>{m.drowningDamage_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.drowningDamage_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.drowningDamage_bedrock_edition()}</td
+						class={isAvailability(m.drowningDamage_bedrock_edition())}>{m.drowningDamage_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -902,14 +808,10 @@
 					<td>{m.enderPearlsVanishOnDeath_type()}</td>
 					<td>{m.enderPearlsVanishOnDeath_category()}</td>
 					<td
-						class={isAvailability.includes(m.enderPearlsVanishOnDeath_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.enderPearlsVanishOnDeath_java_edition()}</td
+						class={isAvailability(m.enderPearlsVanishOnDeath_java_edition())}>{m.enderPearlsVanishOnDeath_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.enderPearlsVanishOnDeath_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.enderPearlsVanishOnDeath_bedrock_edition()}</td
+						class={isAvailability(m.enderPearlsVanishOnDeath_bedrock_edition())}>{m.enderPearlsVanishOnDeath_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -936,14 +838,10 @@
 					<td>{m.fallDamage_type()}</td>
 					<td>{m.fallDamage_category()}</td>
 					<td
-						class={isAvailability.includes(m.fallDamage_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.fallDamage_java_edition()}</td
+						class={isAvailability(m.fallDamage_java_edition())}>{m.fallDamage_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.fallDamage_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.fallDamage_bedrock_edition()}</td
+						class={isAvailability(m.fallDamage_bedrock_edition())}>{m.fallDamage_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -970,14 +868,10 @@
 					<td>{m.fireDamage_type()}</td>
 					<td>{m.fireDamage_category()}</td>
 					<td
-						class={isAvailability.includes(m.fireDamage_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.fireDamage_java_edition()}</td
+						class={isAvailability(m.fireDamage_java_edition())}>{m.fireDamage_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.fireDamage_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.fireDamage_bedrock_edition()}</td
+						class={isAvailability(m.fireDamage_bedrock_edition())}>{m.fireDamage_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1004,14 +898,10 @@
 					<td>{m.forgiveDeadPlayers_type()}</td>
 					<td>{m.forgiveDeadPlayers_category()}</td>
 					<td
-						class={isAvailability.includes(m.forgiveDeadPlayers_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.forgiveDeadPlayers_java_edition()}</td
+						class={isAvailability(m.forgiveDeadPlayers_java_edition())}>{m.forgiveDeadPlayers_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.forgiveDeadPlayers_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.forgiveDeadPlayers_bedrock_edition()}</td
+						class={isAvailability(m.forgiveDeadPlayers_bedrock_edition())}>{m.forgiveDeadPlayers_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1038,14 +928,10 @@
 					<td>{m.freezeDamage_type()}</td>
 					<td>{m.freezeDamage_category()}</td>
 					<td
-						class={isAvailability.includes(m.freezeDamage_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.freezeDamage_java_edition()}</td
+						class={isAvailability(m.freezeDamage_java_edition())}>{m.freezeDamage_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.freezeDamage_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.freezeDamage_bedrock_edition()}</td
+						class={isAvailability(m.freezeDamage_bedrock_edition())}>{m.freezeDamage_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1072,14 +958,10 @@
 					<td>{m.functionCommandLimit_type()}</td>
 					<td>{m.functionCommandLimit_category()}</td>
 					<td
-						class={isAvailability.includes(m.functionCommandLimit_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.functionCommandLimit_java_edition()}</td
+						class={isAvailability(m.functionCommandLimit_java_edition())}>{m.functionCommandLimit_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.functionCommandLimit_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.functionCommandLimit_bedrock_edition()}</td
+						class={isAvailability(m.functionCommandLimit_bedrock_edition())}>{m.functionCommandLimit_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1106,14 +988,10 @@
 					<td>{m.globalSoundEvents_type()}</td>
 					<td>{m.globalSoundEvents_category()}</td>
 					<td
-						class={isAvailability.includes(m.globalSoundEvents_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.globalSoundEvents_java_edition()}</td
+						class={isAvailability(m.globalSoundEvents_java_edition())}>{m.globalSoundEvents_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.globalSoundEvents_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.globalSoundEvents_bedrock_edition()}</td
+						class={isAvailability(m.globalSoundEvents_bedrock_edition())}>{m.globalSoundEvents_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1140,14 +1018,10 @@
 					<td>{m.keepInventory_type()}</td>
 					<td>{m.keepInventory_category()}</td>
 					<td
-						class={isAvailability.includes(m.keepInventory_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.keepInventory_java_edition()}</td
+						class={isAvailability(m.keepInventory_java_edition())}>{m.keepInventory_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.keepInventory_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.keepInventory_bedrock_edition()}</td
+						class={isAvailability(m.keepInventory_bedrock_edition())}>{m.keepInventory_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1174,14 +1048,10 @@
 					<td>{m.lavaSourceConversion_type()}</td>
 					<td>{m.lavaSourceConversion_category()}</td>
 					<td
-						class={isAvailability.includes(m.lavaSourceConversion_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.lavaSourceConversion_java_edition()}</td
+						class={isAvailability(m.lavaSourceConversion_java_edition())}>{m.lavaSourceConversion_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.lavaSourceConversion_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.lavaSourceConversion_bedrock_edition()}</td
+						class={isAvailability(m.lavaSourceConversion_bedrock_edition())}>{m.lavaSourceConversion_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1208,14 +1078,10 @@
 					<td>{m.locatorBar_type()}</td>
 					<td>{m.locatorBar_category()}</td>
 					<td
-						class={isAvailability.includes(m.locatorBar_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.locatorBar_java_edition()}</td
+						class={isAvailability(m.locatorBar_java_edition())}>{m.locatorBar_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.locatorBar_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.locatorBar_bedrock_edition()}</td
+						class={isAvailability(m.locatorBar_bedrock_edition())}>{m.locatorBar_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1242,14 +1108,10 @@
 					<td>{m.logAdminCommands_type()}</td>
 					<td>{m.logAdminCommands_category()}</td>
 					<td
-						class={isAvailability.includes(m.logAdminCommands_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.logAdminCommands_java_edition()}</td
+						class={isAvailability(m.logAdminCommands_java_edition())}>{m.logAdminCommands_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.logAdminCommands_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.logAdminCommands_bedrock_edition()}</td
+						class={isAvailability(m.logAdminCommands_bedrock_edition())}>{m.logAdminCommands_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1276,14 +1138,10 @@
 					<td>{m.maxCommandChainLength_type()}</td>
 					<td>{m.maxCommandChainLength_category()}</td>
 					<td
-						class={isAvailability.includes(m.maxCommandChainLength_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.maxCommandChainLength_java_edition()}</td
+						class={isAvailability(m.maxCommandChainLength_java_edition())}>{m.maxCommandChainLength_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.maxCommandChainLength_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.maxCommandChainLength_bedrock_edition()}</td
+						class={isAvailability(m.maxCommandChainLength_bedrock_edition())}>{m.maxCommandChainLength_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1310,14 +1168,10 @@
 					<td>{m.maxCommandForkCount_type()}</td>
 					<td>{m.maxCommandForkCount_category()}</td>
 					<td
-						class={isAvailability.includes(m.maxCommandForkCount_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.maxCommandForkCount_java_edition()}</td
+						class={isAvailability(m.maxCommandForkCount_java_edition())}>{m.maxCommandForkCount_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.maxCommandForkCount_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.maxCommandForkCount_bedrock_edition()}</td
+						class={isAvailability(m.maxCommandForkCount_bedrock_edition())}>{m.maxCommandForkCount_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1344,14 +1198,10 @@
 					<td>{m.maxEntityCramming_type()}</td>
 					<td>{m.maxEntityCramming_category()}</td>
 					<td
-						class={isAvailability.includes(m.maxEntityCramming_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.maxEntityCramming_java_edition()}</td
+						class={isAvailability(m.maxEntityCramming_java_edition())}>{m.maxEntityCramming_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.maxEntityCramming_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.maxEntityCramming_bedrock_edition()}</td
+						class={isAvailability(m.maxEntityCramming_bedrock_edition())}>{m.maxEntityCramming_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1378,14 +1228,10 @@
 					<td>{m.minecartMaxSpeed_type()}</td>
 					<td>{m.minecartMaxSpeed_category()}</td>
 					<td
-						class={isAvailability.includes(m.minecartMaxSpeed_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.minecartMaxSpeed_java_edition()}</td
+						class={isAvailability(m.minecartMaxSpeed_java_edition())}>{m.minecartMaxSpeed_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.minecartMaxSpeed_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.minecartMaxSpeed_bedrock_edition()}</td
+						class={isAvailability(m.minecartMaxSpeed_bedrock_edition())}>{m.minecartMaxSpeed_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1412,14 +1258,10 @@
 					<td>{m.mobExplosionDropDecay_type()}</td>
 					<td>{m.mobExplosionDropDecay_category()}</td>
 					<td
-						class={isAvailability.includes(m.mobExplosionDropDecay_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.mobExplosionDropDecay_java_edition()}</td
+						class={isAvailability(m.mobExplosionDropDecay_java_edition())}>{m.mobExplosionDropDecay_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.mobExplosionDropDecay_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.mobExplosionDropDecay_bedrock_edition()}</td
+						class={isAvailability(m.mobExplosionDropDecay_bedrock_edition())}>{m.mobExplosionDropDecay_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1446,14 +1288,10 @@
 					<td>{m.mobGriefing_type()}</td>
 					<td>{m.mobGriefing_category()}</td>
 					<td
-						class={isAvailability.includes(m.mobGriefing_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.mobGriefing_java_edition()}</td
+						class={isAvailability(m.mobGriefing_java_edition())}>{m.mobGriefing_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.mobGriefing_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.mobGriefing_bedrock_edition()}</td
+						class={isAvailability(m.mobGriefing_bedrock_edition())}>{m.mobGriefing_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1480,14 +1318,10 @@
 					<td>{m.naturalRegeneration_type()}</td>
 					<td>{m.naturalRegeneration_category()}</td>
 					<td
-						class={isAvailability.includes(m.naturalRegeneration_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.naturalRegeneration_java_edition()}</td
+						class={isAvailability(m.naturalRegeneration_java_edition())}>{m.naturalRegeneration_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.naturalRegeneration_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.naturalRegeneration_bedrock_edition()}</td
+						class={isAvailability(m.naturalRegeneration_bedrock_edition())}>{m.naturalRegeneration_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1514,14 +1348,10 @@
 					<td>{m.playersNetherPortalCreativeDelay_type()}</td>
 					<td>{m.playersNetherPortalCreativeDelay_category()}</td>
 					<td
-						class={isAvailability.includes(m.playersNetherPortalCreativeDelay_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.playersNetherPortalCreativeDelay_java_edition()}</td
+						class={isAvailability(m.playersNetherPortalCreativeDelay_java_edition())}>{m.playersNetherPortalCreativeDelay_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.playersNetherPortalCreativeDelay_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.playersNetherPortalCreativeDelay_bedrock_edition()}</td
+						class={isAvailability(m.playersNetherPortalCreativeDelay_bedrock_edition())}>{m.playersNetherPortalCreativeDelay_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1548,14 +1378,10 @@
 					<td>{m.playersNetherPortalDefaultDelay_type()}</td>
 					<td>{m.playersNetherPortalDefaultDelay_category()}</td>
 					<td
-						class={isAvailability.includes(m.playersNetherPortalDefaultDelay_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.playersNetherPortalDefaultDelay_java_edition()}</td
+						class={isAvailability(m.playersNetherPortalDefaultDelay_java_edition())}>{m.playersNetherPortalDefaultDelay_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.playersNetherPortalDefaultDelay_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.playersNetherPortalDefaultDelay_bedrock_edition()}</td
+						class={isAvailability(m.playersNetherPortalDefaultDelay_bedrock_edition())}>{m.playersNetherPortalDefaultDelay_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1582,14 +1408,10 @@
 					<td>{m.playersSleepingPercentage_type()}</td>
 					<td>{m.playersSleepingPercentage_category()}</td>
 					<td
-						class={isAvailability.includes(m.playersSleepingPercentage_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.playersSleepingPercentage_java_edition()}</td
+						class={isAvailability(m.playersSleepingPercentage_java_edition())}>{m.playersSleepingPercentage_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.playersSleepingPercentage_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.playersSleepingPercentage_bedrock_edition()}</td
+						class={isAvailability(m.playersSleepingPercentage_bedrock_edition())}>{m.playersSleepingPercentage_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1616,14 +1438,10 @@
 					<td>{m.projectilesCanBreakBlocks_type()}</td>
 					<td>{m.projectilesCanBreakBlocks_category()}</td>
 					<td
-						class={isAvailability.includes(m.projectilesCanBreakBlocks_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.projectilesCanBreakBlocks_java_edition()}</td
+						class={isAvailability(m.projectilesCanBreakBlocks_java_edition())}>{m.projectilesCanBreakBlocks_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.projectilesCanBreakBlocks_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.projectilesCanBreakBlocks_bedrock_edition()}</td
+						class={isAvailability(m.projectilesCanBreakBlocks_bedrock_edition())}>{m.projectilesCanBreakBlocks_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1635,9 +1453,7 @@
 							<button
 								class="btn btn-sm btn-neutral"
 								onclick={() => {
-									writeClipboardText(
-										`/gamerule ${m.pvp_game_rules()} ${m.pvp_default_value()}`
-									);
+									writeClipboardText(`/gamerule ${m.pvp_game_rules()} ${m.pvp_default_value()}`);
 								}}
 							>
 								{m.copy_to_clipboard()}
@@ -1649,15 +1465,12 @@
 					<td><kbd class="kbd">{m.pvp_default_value()}</kbd></td>
 					<td>{m.pvp_type()}</td>
 					<td>{m.pvp_category()}</td>
-					<td
-						class={isAvailability.includes(m.pvp_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.pvp_java_edition()}</td
+					<td class={isAvailability(m.pvp_java_edition()) ? 'bg-green-500' : 'bg-red-500'}
+						>{m.pvp_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.pvp_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.pvp_bedrock_edition()}</td
+						class={isAvailability(m.pvp_bedrock_edition()) ? 'bg-green-500' : 'bg-red-500'}
+						>{m.pvp_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1684,14 +1497,10 @@
 					<td>{m.randomTickSpeed_type()}</td>
 					<td>{m.randomTickSpeed_category()}</td>
 					<td
-						class={isAvailability.includes(m.randomTickSpeed_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.randomTickSpeed_java_edition()}</td
+						class={isAvailability(m.randomTickSpeed_java_edition())}>{m.randomTickSpeed_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.randomTickSpeed_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.randomTickSpeed_bedrock_edition()}</td
+						class={isAvailability(m.randomTickSpeed_bedrock_edition())}>{m.randomTickSpeed_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1718,14 +1527,10 @@
 					<td>{m.recipesUnlock_type()}</td>
 					<td>{m.recipesUnlock_category()}</td>
 					<td
-						class={isAvailability.includes(m.recipesUnlock_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.recipesUnlock_java_edition()}</td
+						class={isAvailability(m.recipesUnlock_java_edition())}>{m.recipesUnlock_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.recipesUnlock_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.recipesUnlock_bedrock_edition()}</td
+						class={isAvailability(m.recipesUnlock_bedrock_edition())}>{m.recipesUnlock_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1752,14 +1557,10 @@
 					<td>{m.reducedDebugInfo_type()}</td>
 					<td>{m.reducedDebugInfo_category()}</td>
 					<td
-						class={isAvailability.includes(m.reducedDebugInfo_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.reducedDebugInfo_java_edition()}</td
+						class={isAvailability(m.reducedDebugInfo_java_edition())}>{m.reducedDebugInfo_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.reducedDebugInfo_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.reducedDebugInfo_bedrock_edition()}</td
+						class={isAvailability(m.reducedDebugInfo_bedrock_edition())}>{m.reducedDebugInfo_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1786,14 +1587,10 @@
 					<td>{m.respawnBlocksExplode_type()}</td>
 					<td>{m.respawnBlocksExplode_category()}</td>
 					<td
-						class={isAvailability.includes(m.respawnBlocksExplode_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.respawnBlocksExplode_java_edition()}</td
+						class={isAvailability(m.respawnBlocksExplode_java_edition())}>{m.respawnBlocksExplode_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.respawnBlocksExplode_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.respawnBlocksExplode_bedrock_edition()}</td
+						class={isAvailability(m.respawnBlocksExplode_bedrock_edition())}>{m.respawnBlocksExplode_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1820,14 +1617,10 @@
 					<td>{m.sendCommandFeedback_type()}</td>
 					<td>{m.sendCommandFeedback_category()}</td>
 					<td
-						class={isAvailability.includes(m.sendCommandFeedback_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.sendCommandFeedback_java_edition()}</td
+						class={isAvailability(m.sendCommandFeedback_java_edition())}>{m.sendCommandFeedback_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.sendCommandFeedback_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.sendCommandFeedback_bedrock_edition()}</td
+						class={isAvailability(m.sendCommandFeedback_bedrock_edition())}>{m.sendCommandFeedback_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1854,14 +1647,10 @@
 					<td>{m.showBorderEffect_type()}</td>
 					<td>{m.showBorderEffect_category()}</td>
 					<td
-						class={isAvailability.includes(m.showBorderEffect_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showBorderEffect_java_edition()}</td
+						class={isAvailability(m.showBorderEffect_java_edition())}>{m.showBorderEffect_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.showBorderEffect_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showBorderEffect_bedrock_edition()}</td
+						class={isAvailability(m.showBorderEffect_bedrock_edition())}>{m.showBorderEffect_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1888,14 +1677,10 @@
 					<td>{m.showCoordinates_type()}</td>
 					<td>{m.showCoordinates_category()}</td>
 					<td
-						class={isAvailability.includes(m.showCoordinates_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showCoordinates_java_edition()}</td
+						class={isAvailability(m.showCoordinates_java_edition())}>{m.showCoordinates_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.showCoordinates_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showCoordinates_bedrock_edition()}</td
+						class={isAvailability(m.showCoordinates_bedrock_edition())}>{m.showCoordinates_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1922,14 +1707,10 @@
 					<td>{m.showDaysPlayed_type()}</td>
 					<td>{m.showDaysPlayed_category()}</td>
 					<td
-						class={isAvailability.includes(m.showDaysPlayed_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showDaysPlayed_java_edition()}</td
+						class={isAvailability(m.showDaysPlayed_java_edition())}>{m.showDaysPlayed_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.showDaysPlayed_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showDaysPlayed_bedrock_edition()}</td
+						class={isAvailability(m.showDaysPlayed_bedrock_edition())}>{m.showDaysPlayed_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1956,14 +1737,10 @@
 					<td>{m.showDeathMessages_type()}</td>
 					<td>{m.showDeathMessages_category()}</td>
 					<td
-						class={isAvailability.includes(m.showDeathMessages_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showDeathMessages_java_edition()}</td
+						class={isAvailability(m.showDeathMessages_java_edition())}>{m.showDeathMessages_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.showDeathMessages_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showDeathMessages_bedrock_edition()}</td
+						class={isAvailability(m.showDeathMessages_bedrock_edition())}>{m.showDeathMessages_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -1990,14 +1767,10 @@
 					<td>{m.showRecipeMessages_type()}</td>
 					<td>{m.showRecipeMessages_category()}</td>
 					<td
-						class={isAvailability.includes(m.showRecipeMessages_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showRecipeMessages_java_edition()}</td
+						class={isAvailability(m.showRecipeMessages_java_edition())}>{m.showRecipeMessages_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.showRecipeMessages_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showRecipeMessages_bedrock_edition()}</td
+						class={isAvailability(m.showRecipeMessages_bedrock_edition())}>{m.showRecipeMessages_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2024,14 +1797,10 @@
 					<td>{m.showTags_type()}</td>
 					<td>{m.showTags_category()}</td>
 					<td
-						class={isAvailability.includes(m.showTags_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showTags_java_edition()}</td
+						class={isAvailability(m.showTags_java_edition())}>{m.showTags_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.showTags_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.showTags_bedrock_edition()}</td
+						class={isAvailability(m.showTags_bedrock_edition())}>{m.showTags_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2058,14 +1827,10 @@
 					<td>{m.snowAccumulationHeight_type()}</td>
 					<td>{m.snowAccumulationHeight_category()}</td>
 					<td
-						class={isAvailability.includes(m.snowAccumulationHeight_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.snowAccumulationHeight_java_edition()}</td
+						class={isAvailability(m.snowAccumulationHeight_java_edition())}>{m.snowAccumulationHeight_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.snowAccumulationHeight_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.snowAccumulationHeight_bedrock_edition()}</td
+						class={isAvailability(m.snowAccumulationHeight_bedrock_edition())}>{m.snowAccumulationHeight_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2092,14 +1857,10 @@
 					<td>{m.spawnChunkRadius_type()}</td>
 					<td>{m.spawnChunkRadius_category()}</td>
 					<td
-						class={isAvailability.includes(m.spawnChunkRadius_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.spawnChunkRadius_java_edition()}</td
+						class={isAvailability(m.spawnChunkRadius_java_edition())}>{m.spawnChunkRadius_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.spawnChunkRadius_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.spawnChunkRadius_bedrock_edition()}</td
+						class={isAvailability(m.spawnChunkRadius_bedrock_edition())}>{m.spawnChunkRadius_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2126,14 +1887,10 @@
 					<td>{m.spawnRadius_type()}</td>
 					<td>{m.spawnRadius_category()}</td>
 					<td
-						class={isAvailability.includes(m.spawnRadius_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.spawnRadius_java_edition()}</td
+						class={isAvailability(m.spawnRadius_java_edition())}>{m.spawnRadius_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.spawnRadius_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.spawnRadius_bedrock_edition()}</td
+						class={isAvailability(m.spawnRadius_bedrock_edition())}>{m.spawnRadius_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2160,14 +1917,10 @@
 					<td>{m.spectatorsGenerateChunks_type()}</td>
 					<td>{m.spectatorsGenerateChunks_category()}</td>
 					<td
-						class={isAvailability.includes(m.spectatorsGenerateChunks_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.spectatorsGenerateChunks_java_edition()}</td
+						class={isAvailability(m.spectatorsGenerateChunks_java_edition())}>{m.spectatorsGenerateChunks_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.spectatorsGenerateChunks_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.spectatorsGenerateChunks_bedrock_edition()}</td
+						class={isAvailability(m.spectatorsGenerateChunks_bedrock_edition())}>{m.spectatorsGenerateChunks_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2194,14 +1947,10 @@
 					<td>{m.tntExplodes_type()}</td>
 					<td>{m.tntExplodes_category()}</td>
 					<td
-						class={isAvailability.includes(m.tntExplodes_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.tntExplodes_java_edition()}</td
+						class={isAvailability(m.tntExplodes_java_edition())}>{m.tntExplodes_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.tntExplodes_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.tntExplodes_bedrock_edition()}</td
+						class={isAvailability(m.tntExplodes_bedrock_edition())}>{m.tntExplodes_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2228,14 +1977,10 @@
 					<td>{m.tntExplosionDropDecay_type()}</td>
 					<td>{m.tntExplosionDropDecay_category()}</td>
 					<td
-						class={isAvailability.includes(m.tntExplosionDropDecay_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.tntExplosionDropDecay_java_edition()}</td
+						class={isAvailability(m.tntExplosionDropDecay_java_edition())}>{m.tntExplosionDropDecay_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.tntExplosionDropDecay_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.tntExplosionDropDecay_bedrock_edition()}</td
+						class={isAvailability(m.tntExplosionDropDecay_bedrock_edition())}>{m.tntExplosionDropDecay_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2262,14 +2007,10 @@
 					<td>{m.universalAnger_type()}</td>
 					<td>{m.universalAnger_category()}</td>
 					<td
-						class={isAvailability.includes(m.universalAnger_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.universalAnger_java_edition()}</td
+						class={isAvailability(m.universalAnger_java_edition())}>{m.universalAnger_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.universalAnger_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.universalAnger_bedrock_edition()}</td
+						class={isAvailability(m.universalAnger_bedrock_edition())}>{m.universalAnger_bedrock_edition()}</td
 					>
 				</tr>
 				<tr>
@@ -2296,14 +2037,10 @@
 					<td>{m.waterSourceConversion_type()}</td>
 					<td>{m.waterSourceConversion_category()}</td>
 					<td
-						class={isAvailability.includes(m.waterSourceConversion_java_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.waterSourceConversion_java_edition()}</td
+						class={isAvailability(m.waterSourceConversion_java_edition())}>{m.waterSourceConversion_java_edition()}</td
 					>
 					<td
-						class={isAvailability.includes(m.waterSourceConversion_bedrock_edition())
-							? 'bg-green-500'
-							: 'bg-red-500'}>{m.waterSourceConversion_bedrock_edition()}</td
+						class={isAvailability(m.waterSourceConversion_bedrock_edition())}>{m.waterSourceConversion_bedrock_edition()}</td
 					>
 				</tr>
 			</tbody>

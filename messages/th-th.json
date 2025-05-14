@@ -274,7 +274,7 @@
 	"maxCommandForkCount_java_edition": "ใช่",
 	"maxCommandForkCount_bedrock_edition": "ไม่",
 	"maxEntityCramming_game_rules": "maxEntityCramming",
-	"maxEntityCramming_description": "The maximum number of pushable entities a mob or player can push, before taking 6 (❤️❤️❤️) entity cramming damage per half-second. Setting to 0 or lower disables the rule. Damage affects Survival-mode or Adventure-mode players, and all mobs but bats. Pushable entities include non-Spectator-mode players, any mob except bats, as well as boats and minecarts.",
+	"maxEntityCramming_description": "The maximum number of pushable entities a mob or player can push, before taking 6 (💖💖💖) entity cramming damage per half-second. Setting to 0 or lower disables the rule. Damage affects Survival-mode or Adventure-mode players, and all mobs but bats. Pushable entities include non-Spectator-mode players, any mob except bats, as well as boats and minecarts.",
 	"maxEntityCramming_default_value": "24",
 	"maxEntityCramming_type": "Int",
 	"maxEntityCramming_category": "ม็อบ",
