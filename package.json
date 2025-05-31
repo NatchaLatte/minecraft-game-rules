@@ -50,6 +50,7 @@
 		"@inlang/paraglide-js": "^2.0.0",
 		"@lucide/svelte": "^0.511.0",
 		"@vercel/analytics": "^1.5.0",
+		"@vercel/speed-insights": "^1.2.0",
 		"gsap": "^3.13.0"
 	}
 }
