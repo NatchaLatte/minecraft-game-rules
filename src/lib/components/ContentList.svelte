@@ -812,7 +812,7 @@
 >
 	<ArrowUp class="h-full w-full" />
 </button>
-<section class="min-h-screen bg-black text-neutral-300 px-10 md:px-20 pb-[1.5rem]">
+<section class="min-h-screen bg-black px-10 pb-[1.5rem] text-neutral-300 md:px-20">
 	<div class="flex w-full items-center justify-center sm:justify-end">
 		<div class="relative mb-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
 			<span
