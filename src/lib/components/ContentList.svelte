@@ -806,13 +806,13 @@
 <button
 	onclick={backToTopBtn}
 	class={`transition-visibility fixed right-[1.5rem] bottom-[1.5rem] z-200 inline-block h-[2.75rem] w-[2.75rem] cursor-pointer border-none transition-opacity duration-500
- will-change-[opacity] ${isVisibility ? 'visible opacity-100' : 'invisible opacity-0'} rounded-md bg-blue-900/80 p-2 text-white hover:brightness-[1.20] active:cursor-grab`}
+ will-change-[opacity] ${isVisibility ? 'visible opacity-100' : 'invisible opacity-0'} rounded-md bg-blue-900/80 p-2 text-white hover:brightness-[1.20]`}
 	aria-label="Back to top"
 	title="Back to top"
 >
 	<ArrowUp class="h-full w-full" />
 </button>
-<section class="min-h-screen bg-black px-10 text-neutral-300 md:px-20">
+<section class="min-h-screen bg-black text-neutral-300 px-10 md:px-20 pb-[1.5rem]">
 	<div class="flex w-full items-center justify-center sm:justify-end">
 		<div class="relative mb-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
 			<span
@@ -867,7 +867,7 @@
 						<td class="py-5">
 							<button
 								title={rule.game_rules_tooltip}
-								class="rounded-md bg-blue-900 px-5 text-neutral-300 transition-transform hover:bg-blue-800 active:scale-95"
+								class="cursor-pointer rounded-md bg-blue-900 px-5 text-neutral-300 transition-transform hover:bg-blue-800 active:scale-95"
 								type="button"
 								onclick={() => writeClipboardText(rule.game_rules_clipboard, index)}
 								>{copiedIndex === index ? m.copied_to_clipboard() : m.copy_to_clipboard()}</button

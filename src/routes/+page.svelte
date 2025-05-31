@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{m.game_rule()}</title>
+	<title>{m.game_rule()} | Minecraft</title>
 </svelte:head>
 
 <Navbar />
