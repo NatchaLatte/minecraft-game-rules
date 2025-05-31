@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@theme {
+	--font-kanit: 'Kanit', sans-serif;
+}
+
+body {
+	@apply font-kanit;
+}
+
+/* ความกว้าง scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px; /* สำหรับ scrollbar แนวนอน */
+}
+
+/* ราง (track) */
+::-webkit-scrollbar-track {
+	@apply bg-black;
+}
+
+/* ปุ่มเลื่อน (thumb) */
+::-webkit-scrollbar-thumb {
+	@apply rounded-full bg-neutral-100;
+}
+
+/* เมื่อ hover ที่ thumb */
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-neutral-300;
+}
