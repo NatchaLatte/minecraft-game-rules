@@ -477,5 +477,6 @@
 	"waterSourceConversion_category": "World Updates",
 	"waterSourceConversion_java_edition": "Yes",
 	"waterSourceConversion_bedrock_edition": "No",
-	"search": "Search..."
+	"search": "Search...",
+	"seo_description": "A website that collects and translates Minecraft game rules."
 }
